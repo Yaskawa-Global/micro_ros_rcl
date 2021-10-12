@@ -20,7 +20,7 @@
 #ifdef RCL_MICROROS_COMPLETE_IMPL
 #include "rcl_yaml_param_parser/types.h"
 #else
-typedef bool rcl_params_t;
+// typedef bool rcl_params_t;
 #endif // RCL_MICROROS_COMPLETE_IMPL
 #include "./remap_impl.h"
 
