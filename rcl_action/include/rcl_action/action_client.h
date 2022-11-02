@@ -28,13 +28,13 @@ extern "C"
 
 
 /// Internal action client implementation struct.
-typedef struct rcl_action_client_impl_s rcl_action_client_impl_t;
+// typedef struct rcl_action_client_impl_s rcl_action_client_impl_t;
 
 /// Structure which encapsulates a ROS action client.
 typedef struct rcl_action_client_s
 {
   /// Pointer to the action client implementation
-  rcl_action_client_impl_t * impl;
+  struct rcl_action_client_impl_s * impl;
 } rcl_action_client_t;
 
 /// Options available for a rcl_action_client_t.

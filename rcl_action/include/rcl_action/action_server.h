@@ -31,13 +31,13 @@ extern "C"
 #include "rosidl_runtime_c/action_type_support_struct.h"
 
 /// Internal rcl_action implementation struct.
-typedef struct rcl_action_server_impl_s rcl_action_server_impl_t;
+// typedef struct rcl_action_server_impl_s rcl_action_server_impl_t;
 
 /// Structure which encapsulates a ROS Action Server.
 typedef struct rcl_action_server_s
 {
   /// Pointer to the action server implementation
-  rcl_action_server_impl_t * impl;
+  struct rcl_action_server_impl_s * impl;
 } rcl_action_server_t;
 
 /// Options available for a rcl_action_server_t.

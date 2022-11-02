@@ -26,7 +26,7 @@ extern "C"
 {
 #endif
 
-typedef struct rcl_lifecycle_transition_s rcl_lifecycle_transition_t;
+// typedef struct rcl_lifecycle_transition_s rcl_lifecycle_transition_t;
 
 /// It contains the state of the lifecycle state machine
 typedef struct rcl_lifecycle_state_s
@@ -37,7 +37,7 @@ typedef struct rcl_lifecycle_state_s
   uint8_t id;
 
   /// Pointer to a struct with the valid transitions
-  rcl_lifecycle_transition_t * valid_transitions;
+  struct rcl_lifecycle_transition_s * valid_transitions;
   /// Number of valid transitions
   unsigned int valid_transition_size;
 } rcl_lifecycle_state_t;
@@ -64,7 +64,7 @@ typedef struct rcl_lifecycle_transition_map_s
   /// Number of states
   unsigned int states_size;
   /// Transitions used to generate the transition map
-  rcl_lifecycle_transition_t * transitions;
+  struct rcl_lifecycle_transition_s * transitions;
   /// Number of transitions
   unsigned int transitions_size;
 } rcl_lifecycle_transition_map_t;
