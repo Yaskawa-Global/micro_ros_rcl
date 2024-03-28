@@ -40,7 +40,8 @@ extern "C"
 extern const char * const RCL_DISABLE_LOANED_MESSAGES_ENV_VAR;
 
 typedef struct rcl_node_impl_s rcl_node_impl_t;
-typedef struct rcl_service_s rcl_service_t;
+// typedef struct rcl_service_s rcl_service_t;
+struct rcl_service_s;
 
 /// Structure which encapsulates a ROS Node.
 typedef struct rcl_node_s
