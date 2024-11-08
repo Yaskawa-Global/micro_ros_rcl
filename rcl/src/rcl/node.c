@@ -622,7 +622,7 @@ void rcl_node_type_description_service_handle_request(
   }
 
   response->successful = true;
-#endif //RCL_MICROROS
+#endif // RCL_MICROROS_COMPLETE_IMPL
 }
 
 rcl_ret_t rcl_node_type_description_service_init(rcl_node_t * node)
@@ -666,7 +666,7 @@ rcl_ret_t rcl_node_type_description_service_init(rcl_node_t * node)
 #else
   (void)node;
   return RCL_RET_UNSUPPORTED;
-#endif //RCL_MICROROS
+#endif // RCL_MICROROS_COMPLETE_IMPL
 }
 
 rcl_ret_t rcl_node_type_description_service_fini(rcl_node_t * node)
@@ -689,7 +689,7 @@ rcl_ret_t rcl_node_type_description_service_fini(rcl_node_t * node)
 #else
   (void)node;
   return RCL_RET_UNSUPPORTED;
-#endif //RCL_MICROROS
+#endif // RCL_MICROROS_COMPLETE_IMPL
 }
 
 rcl_ret_t rcl_node_get_type_description_service(
@@ -711,7 +711,7 @@ rcl_ret_t rcl_node_get_type_description_service(
   (void)node;
   (void)service_out;
   return RCL_RET_UNSUPPORTED;
-#endif //RCL_MICROROS
+#endif // RCL_MICROROS_COMPLETE_IMPL
 }
 
 #ifdef __cplusplus
