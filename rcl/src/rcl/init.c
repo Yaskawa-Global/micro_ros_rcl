@@ -277,7 +277,7 @@ rcl_init(
     fail_ret = RCL_RET_BAD_ALLOC;
     goto fail;
   }
-#endif //RCL_MICROROS
+#endif // RCL_MICROROS_COMPLETE_IMPL
 
   int validation_result;
   size_t invalid_index;

@@ -596,7 +596,7 @@ void rcl_node_type_description_service_handle_request(
   }
 
   response->successful = true;
-#endif //RCL_MICROROS
+#endif // RCL_MICROROS_COMPLETE_IMPL
 }
 
 rcl_ret_t rcl_node_type_description_service_init(
@@ -640,5 +640,5 @@ rcl_ret_t rcl_node_type_description_service_init(
 #else
   (void)node;
   return RCL_RET_UNSUPPORTED;
-#endif //RCL_MICROROS
+#endif // RCL_MICROROS_COMPLETE_IMPL
 }

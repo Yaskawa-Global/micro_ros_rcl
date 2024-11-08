@@ -117,13 +117,13 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
 endif()
 
 if(NOT RCL_MICROROS)
-  ament_target_dependencies(${PROJECT_NAME}
+  ament_target_dependencies(${PROJECT_NAME} PUBLIC
     "rcl_yaml_param_parser"
   )
 endif()
 
 if(NOT RCL_MICROROS)
-  ament_target_dependencies(${PROJECT_NAME}
+  ament_target_dependencies(${PROJECT_NAME} PUBLIC
     ${RCL_LOGGING_IMPL}
   )
 endif()
