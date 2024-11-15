@@ -120,6 +120,7 @@ __cleanup_context(rcl_context_t * context)
       RCUTILS_SAFE_FWRITE_TO_STDERR("\n");
       rcl_reset_error();
     }
+    context->impl->allocator.deallocate(context->impl->init_options.impl->rmw_init_options.enclave, context->impl->allocator.state);
   }
 #endif // RCL_COMMAND_LINE_ENABLED
 
