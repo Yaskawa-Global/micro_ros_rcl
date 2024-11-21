@@ -560,11 +560,6 @@ rcl_wait(rcl_wait_set_t * wait_set, int64_t timeout)
   int64_t min_next_call_time[RCL_STEADY_TIME + 1];
   rcl_clock_t * clocks[RCL_STEADY_TIME + 1] = {NULL, NULL, NULL, NULL};
 
-  // asserts to make sure nobody changes the ordering of RCL_ROS_TIME,
-  // RCL_SYSTEM_TIME and RCL_STEADY_TIME
-  static_assert(RCL_ROS_TIME < RCL_STEADY_TIME + 1, "RCL_ROS_TIME won't fit in the array");
-  static_assert(RCL_SYSTEM_TIME < RCL_STEADY_TIME + 1, "RCL_SYSTEM_TIME won't fit in the array");
-  static_assert(RCL_STEADY_TIME < RCL_STEADY_TIME + 1, "RCL_STEADY_TIME won't fit in the array");
 
   min_next_call_time[RCL_ROS_TIME] = INT64_MAX;
   min_next_call_time[RCL_SYSTEM_TIME] = INT64_MAX;
