@@ -587,7 +587,7 @@ rcl_get_disable_loaned_message(bool * disable_loaned_message);
 RCL_PUBLIC
 RCL_WARN_UNUSED
 rcl_ret_t rcl_node_type_description_service_init(
-  rcl_service_t * service,
+  struct rcl_service_s * service,
   const rcl_node_t * node);
 
 /// Process a single pending request to the GetTypeDescription service.
